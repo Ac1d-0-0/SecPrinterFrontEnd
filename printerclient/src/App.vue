@@ -7,7 +7,7 @@
         <el-step title="步骤 1：登录" v-if="!store.state.ifLogin" id="login"></el-step>
         <el-step title="步骤 1：注销" v-if="store.state.ifLogin" id="logout"></el-step>
         <el-step title="步骤 2：选择打印机" id="choose"></el-step>
-        <el-step title="步骤 3：确认打印" id="confirm"></el-step>
+        <el-step title="步骤 3：打印结果" id="confirm"></el-step>
       </el-steps>
     </el-header>
     <el-main>
@@ -38,33 +38,12 @@
     </el-main>
 
     <el-footer>
-      <el-row>
-        <el-col :span="8">
-          <div class="grid-content bg-purple"></div>
-        </el-col>
-        <el-col v-if="!(store.state.active === 2)" :span="8">
-          <div class="grid-content bg-purple-dark">
-            <el-button type="primary" @click="store.state.active++" plain>下一步</el-button>
-          </div>
-        </el-col>
-        <el-col :span="8">
-          <div class="grid-content bg-purple"></div>
-        </el-col>
-      </el-row>
-      <el-col>
-
-      </el-col>
-      <el-row>
-        <el-col :span="8">
-          <div class="grid-content bg-purple"></div>
-        </el-col>
-        <el-col v-if="!(store.state.active === 0)" :span="8">
-          <div class="grid-content bg-purple-dark">
+      <el-row justify="center">
+        <el-col class="grid-content" v-if="!(store.state.active === 0)" :span="3">
             <el-button type="primary" @click="store.state.active--" plain>上一步</el-button>
-          </div>
         </el-col>
-        <el-col :span="8">
-          <div class="grid-content bg-purple"></div>
+        <el-col class="grid-content" v-if="!(store.state.active === 2) && store.state.ifLogin" :span="3">
+            <el-button type="primary" @click="store.state.active++" plain>下一步</el-button>
         </el-col>
       </el-row>
     </el-footer>

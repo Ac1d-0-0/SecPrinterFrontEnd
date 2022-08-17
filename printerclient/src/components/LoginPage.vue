@@ -26,7 +26,7 @@
       ></el-input>
     </el-form-item>
     <el-form-item>
-      <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
+      <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
       <el-button @click="resetForm('ruleForm')">重置</el-button>
     </el-form-item>
   </el-form>
@@ -122,7 +122,7 @@ export default {
             console.log(this.store.state.printerList)
 
             await this.$alert('登录认证成功', '消息', {
-              confirmButtonText: '确定',
+              confirmButtonTextv: '确定',
               callback: () => {
               },
             })

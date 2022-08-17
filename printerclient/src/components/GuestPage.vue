@@ -79,7 +79,6 @@ export default {
       let result = null
       this.$refs[formName].validate(async (valid) => {
         if (valid) {
-          //TODO send /auth to server
           let auth_data = new FormData();
           auth_data.append('id', this.ruleForm.id);
           auth_data.append('passwd', this.ruleForm.passwd);

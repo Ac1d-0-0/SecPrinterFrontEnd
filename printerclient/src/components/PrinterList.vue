@@ -27,7 +27,7 @@
     </el-table>
 
     <div style="margin-top: 20px">
-      <el-button @click="saveSelection(this.store.state.printerList)">保存打印设置</el-button>
+      <el-button @click="saveSelection(this.store.state.printerList)">确认打印</el-button>
       <el-button @click="reload()">刷新列表</el-button>
     </div>
   </template>
@@ -102,18 +102,7 @@ export default {
           },
         })
       }
-      // if (this.store.state.firstSet) {
-      //   // 打开spooler开始监听
-      //   let spooler_data = new FormData();
-      //   spooler_data.append('username', this.store.state.username);
-      //   spooler_data.append('passwd', this.store.state.passwd);
-      //   await axios.post(this.store.state.serverAddr + "open_spooler", spooler_data)
-      //       .then(response => (console.log(response.data)))
-      //       .catch(function (error) {
-      //         console.log(error)
-      //       })
-      //   this.store.state.firstSet = false
-      // }
+
 
     },
 
@@ -133,7 +122,6 @@ export default {
       await axios.post(this.store.state.serverAddr + "get_printers", auth_data)
           .then(response => {
             printer_map = response.data.printer_map
-            // result = response.data.result
           })
           .catch(function (error) {
             console.log(error)
