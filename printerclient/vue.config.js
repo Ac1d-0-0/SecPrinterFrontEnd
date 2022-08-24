@@ -2,13 +2,14 @@ module.exports = {
   pluginOptions: {
     electronBuilder: {
       builderOptions: {
-        "appId": "com.example.app",
-        "productName":"printerAgent",
+        "appId": "SecPrinterClient",
+        "productName":"printerClient",
         "copyright":"Copyright © 2022",
         "directories":{
           "output":"./dist"
         },
         "win":{
+          "icon":"./icon.jpg",
           "target": [
             {
               "target": "nsis",
@@ -17,8 +18,14 @@ module.exports = {
               ]
             }
           ]
+        },
+        "extraResources":{
+          "from":"resources/icons/",
+          "to":"icons/"
         }
-      }
+      },
+      nodeIntegration: true,
+
     }
 
   }

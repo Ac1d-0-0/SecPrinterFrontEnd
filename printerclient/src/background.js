@@ -22,7 +22,8 @@ async function createWindow() {
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
       contextIsolation: !process.env.ELECTRON_NODE_INTEGRATION
-    }
+    },
+
   })
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
@@ -76,7 +77,7 @@ let tray = null
 app.whenReady().then(() => {
 
   Menu.setApplicationMenu(null)
-  tray = new Tray('icon.jpg')
+  tray = new Tray('resources/icons/icon.jpg')
   tray.setToolTip('安全打印客户端')
   const contextMenu = Menu.buildFromTemplate([
     {
@@ -98,7 +99,9 @@ app.whenReady().then(() => {
 
   exp.get('/print_show', (req, res) => {
     win.show()
-    res.send({    status: 'ok'  })
+    win.webContents.send("printRequest")
+
+    res.send({status: 'ok'})
   })
 
   exp.listen(port)

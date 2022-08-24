@@ -1019,6 +1019,11 @@
     global-agent "^3.0.0"
     global-tunnel-ng "^2.7.1"
 
+"@electron/remote@^2.0.8":
+  version "2.0.8"
+  resolved "https://mirrors.cloud.tencent.com/npm/@electron%2fremote/-/remote-2.0.8.tgz#85ff321f0490222993207106e2f720273bb1a5c3"
+  integrity sha512-P10v3+iFCIvEPeYzTWWGwwHmqWnjoh8RYnbtZAb3RlQefy4guagzIwcWtfftABIfm6JJTNQf4WPSKWZOpLmHXw==
+
 "@electron/universal@1.0.5":
   version "1.0.5"
   resolved "https://mirrors.cloud.tencent.com/npm/@electron%2funiversal/-/universal-1.0.5.tgz#b812340e4ef21da2b3ee77b2b4d35c9b86defe37"
@@ -1992,6 +1997,14 @@
     "@vueuse/shared" "8.9.4"
     vue-demi "*"
 
+"@vueuse/electron@^9.1.0":
+  version "9.1.0"
+  resolved "https://mirrors.cloud.tencent.com/npm/@vueuse%2felectron/-/electron-9.1.0.tgz#0780227ea073e32f0dda521de26c177b3622bd6e"
+  integrity sha512-KJCqfN38qLw4lVsp2N3LTxCo2SeLrAQ+apnvkxCfMAecGgPZScpiguWD+HnX5+TwOAsM4Ats8UCj2vJZDPrfTA==
+  dependencies:
+    "@vueuse/shared" "9.1.0"
+    vue-demi "*"
+
 "@vueuse/metadata@8.9.4":
   version "8.9.4"
   resolved "https://mirrors.tencent.com/npm/@vueuse%2fmetadata/-/metadata-8.9.4.tgz#a4132db33e4c1b1023636acfa20aa7b37ab3d978"
@@ -2001,6 +2014,13 @@
   version "8.9.4"
   resolved "https://mirrors.tencent.com/npm/@vueuse%2fshared/-/shared-8.9.4.tgz#c9741c30ffb666b50d62f0dd80b76119fd47573e"
   integrity sha512-wt+T30c4K6dGRMVqPddexEVLa28YwxW5OFIPmzUHICjphfAuBFTTdDoyqREZNDOFJZ44ARH1WWQNCUK8koJ+Ag==
+  dependencies:
+    vue-demi "*"
+
+"@vueuse/shared@9.1.0":
+  version "9.1.0"
+  resolved "https://mirrors.tencent.com/npm/@vueuse%2fshared/-/shared-9.1.0.tgz#d8459a45324f32fb05a2a56ed754637c3d0efaeb"
+  integrity sha512-pB/3njQu4tfJJ78ajELNda0yMG6lKfpToQW7Soe09CprF1k3QuyoNi1tBNvo75wBDJWD+LOnr+c4B5HZ39jY/Q==
   dependencies:
     vue-demi "*"
 

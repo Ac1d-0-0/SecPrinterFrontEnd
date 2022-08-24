@@ -2,7 +2,7 @@ module.exports = {
     pluginOptions: {
         electronBuilder: {
             builderOptions: {
-                "appId": "SecPrinter",
+                "appId": "SecPrinterAgent",
                 "productName":"AgentManager",
                 "copyright":"Copyright © 2022 Ac1d",
                 "directories":{
@@ -18,6 +18,10 @@ module.exports = {
                             ]
                         }
                     ]
+                },
+                "extraResources":{
+                    "from":"resources/icons/",
+                    "to":"icons/"
                 }
             }
         }

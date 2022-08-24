@@ -71,7 +71,7 @@ let tray = null
 app.whenReady().then(() => {
 
   Menu.setApplicationMenu(null)
-  tray = new Tray('icon.jpg')
+  tray = new Tray('resources/icons/icon.jpg')
   tray.setToolTip('安全打印管理')
   const contextMenu = Menu.buildFromTemplate([
     {

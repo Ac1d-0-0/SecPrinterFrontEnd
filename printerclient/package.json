@@ -1,6 +1,6 @@
 {
-  "name": "printerclient",
-  "version": "0.1.0",
+  "name": "printerClient",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -13,6 +13,8 @@
   },
   "main": "background.js",
   "dependencies": {
+    "@electron/remote": "^2.0.8",
+    "@vueuse/electron": "^9.1.0",
     "async": "^3.2.3",
     "axios": "^0.26.0",
     "babel-eslint": "^10.1.0",

@@ -10,3 +10,4 @@ import store from './components/GlobalVars'
 const appPrinter = createApp(App)
 appPrinter.use(ElementPlus).use(Vuex).use(store)
 appPrinter.mount('#app')
+
